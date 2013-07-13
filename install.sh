@@ -51,7 +51,6 @@ check_tools() {
 
 download_tools () {
   # Use wget to download the appropriate installer curl has some issues (or I couldn't find the flags :)
-  
   if [ -f /tmp/$cltools ]; then
     # indirmd5=`md5 -q /tmp/$cltools`
     if [ `md5 -q /tmp/$cltools` = "${pkgmd5}" ]; then
@@ -60,14 +59,8 @@ download_tools () {
        rm -f /tmp/$cltools
     fi
   else
-
-  # if [ ! -f /tmp/$cltools ]; then
-  #     echo -e "$info Downloading Command Line Tools for Mac OS X $osxversion"
-      cd /tmp && wget $pkg_url -O ./$cltools
-  # else
-      # echo -e "$info $cltools already downloaded to /tmp/$cltools."
+    cd /tmp && wget $pkg_url -O ./$cltools
   fi
-
 }
 
 install_tools() {
