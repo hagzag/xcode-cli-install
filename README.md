@@ -10,11 +10,9 @@ you cannot download without an Apple userid and pass which takes the juice out o
 If you just want the dmg's click on [Lion](https://www.dropbox.com/s/fnqgdilm0yddfc0/xcode462_cltools_10_76938260a.dmg) or [Mountain Lion](https://www.dropbox.com/s/hw45wvjxrkrl59x/xcode462_cltools_10_86938259a.dmg)
 
 ## Usage [ when used standalone ]
-	curl -L https://raw.github.com/hagzag/xcode-cli-install/master/install.sh | bash
-
+	sudo bash < <(curl -L https://raw.github.com/hagzag/xcode-cli-install/master/install.sh)
 ## Uninstalling [ when used standalone ]
-	curl -L https://raw.github.com/hagzag/xcode-cli-install/master/uninstall.sh | bash
-
+	sudo bash < <(curl -L https://raw.github.com/hagzag/xcode-cli-install/master/uninstall.sh)
 **This is 1 of a series of tools/utils to automate your macosx workstation setup**
 
 At some stage I would do this with [Chef](http://www.opscode.com/chef/), but there is a chicken & egg situation and on a new mac the cookbooks for dmg's where quite buggie.

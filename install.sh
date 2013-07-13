@@ -75,7 +75,7 @@ install_tools() {
   hdiutil unmount "$mountpath"
 
   gcc_bin=`which gcc`
-  gcc --version 2>/dev/null && echo -e "$info gcc found in $gcc_bin"
+  gcc --version &>/dev/null && echo -e "$info gcc found in $gcc_bin"
 }
  
 cleanup () {
